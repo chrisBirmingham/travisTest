@@ -11,5 +11,10 @@ class test(unittest.TestCase):
         dragon.setStrength(20)
         self.failUnlessEqual(40, dragon.getStrength())
 
+    def testFail(self):
+        dragon = Dragon("Razil", 20, 30)
+        dragon.setDefence(20)
+        self.failUnlessEqual(30, dragon.getStrength())
+
 if __name__ == '__main__':
     unittest.main()
